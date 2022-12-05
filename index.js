@@ -1,6 +1,8 @@
 // import React from "react";
 // import ReactDOM from "react-DOM";
 
+const e = React.createElement;
+
 function Nav() {
   return (
     <div>
@@ -13,5 +15,6 @@ function Nav() {
     </div>
   );
 }
-
-ReactDOM.render(<Nav />, document.getElementById("root"));
+const domContainer = document.querySelector("#root");
+const root = ReactDOM.createRoot(domContainer);
+root.render(e(Nav));
